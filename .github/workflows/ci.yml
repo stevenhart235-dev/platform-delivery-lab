@@ -1,31 +1,13 @@
+
 name: CI - sample API
 
 on:
-  pull_request:
   push:
     branches: [main]
 
-permissions:
-  contents: read
+  pull_request:
+    branches: [main]
 
 jobs:
-  test:
-    name: Test sample API
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Run unit tests
-        run: python -m unittest discover -s tests -v
-      - name: Compile sample application
-        run: python -m compileall -q apps/sample-api
-      - name: Display execution context
-        run: |
-          echo "Repository: $GITHUB_REPOSITORY"
-          echo "Branch: $GITHUB_REF_NAME"
-          echo "Runner OS: $RUNNER_OS"
-          echo "Commit SHA: $GITHUB_SHA"
+  ci:
+    uses: ./.github/workflows/reusable-python-ci.yml
