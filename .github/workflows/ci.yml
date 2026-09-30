@@ -9,6 +9,6 @@ on:
 
 jobs:
   ci:
-    uses: stevenhart235-dev/platform-workflows/.github/workflows/reusable-python-ci.yml@v1.1.0
+    uses: stevenhart235-dev/platform-workflows/.github/workflows/reusable-python-ci.yml@v1.1.1
     with:
       python-version: "3.13"
