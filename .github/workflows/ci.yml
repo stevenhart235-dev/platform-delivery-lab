@@ -23,3 +23,9 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Compile sample application
         run: python -m compileall -q apps/sample-api
+      - name: Display execution context
+        run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Branch: $GITHUB_REF_NAME"
+          echo "Runner OS: $RUNNER_OS"
+          echo "Commit SHA: $GITHUB_SHA"
