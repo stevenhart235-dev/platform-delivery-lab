@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   plan:
-    uses: stevenhart235-dev/platform-workflows/.github/workflows/friday-golden-path-plan.yml@v2.0.0
+    uses: stevenhart235-dev/platform-workflows/.github/workflows/friday-golden-path-plan.yml@v2.0.1
     with:
       consumer-intent-path: platform/friday-poc-intent.yaml
       subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
