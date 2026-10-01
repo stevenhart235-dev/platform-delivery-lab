@@ -1,0 +1,17 @@
+name: Friday golden-path plan
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  plan:
+    uses: stevenhart235-dev/platform-workflows/.github/workflows/friday-golden-path-plan.yml@v2.0.0
+    with:
+      consumer-intent-path: platform/friday-poc-intent.yaml
+      subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      azure-client-id: ${{ vars.AZURE_CLIENT_ID }}
+      azure-tenant-id: ${{ vars.AZURE_TENANT_ID }}
