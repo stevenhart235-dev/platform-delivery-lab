@@ -1,5 +1,5 @@
 schema_version: "1.0"
 service: headshot-api
 team: platform-engineering
-environment: dev
+environment: banana
 cost_center: "11300"
